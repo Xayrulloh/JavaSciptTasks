@@ -1,0 +1,745 @@
+// Recoursion
+// 1 - exercise
+/*function factorial(num) {
+    if (num === 0) return 1
+    else return num * factorial(num - 1)
+}
+let num = 5
+if (num >= 0) {
+    console.log(`The factorial of ${num} is ${factorial(num)}`);
+}
+else console.log('A xato bosh');*/
+
+// 2 - exercise
+/*function Diapazon(startNum, endNum) {
+    if (endNum - startNum === 2) return [startNum + 1]
+    else {
+      var numbers = Diapazon(startNum , endNum - 1);
+      numbers.push(endNum - 1);
+      return numbers;
+    }
+  }
+console.log(Diapazon(2, 9));*/
+
+// 3 - exercise
+/*function sum_array(array) {
+    if (array.length === 1) return array[0]
+    else return array.pop() + sum_array(array)
+}
+console.log(sum_array([1, 2, 3]));*/
+
+// 4 - misol
+/*function exponent(a, b) {
+    if (b === 0) return 1
+    else return a * exponent(a, b - 1)
+}
+console.log(exponent(8, 2));*/
+
+// 5 - misol
+/*function fibonaci(num) {
+    if (num === 1) return [0, 1]
+    else {
+        let a = fibonaci(num - 1)
+        a.push(a[a.length - 1] + a[a.length - 2])
+        return a
+    }
+}
+console.log(fibonaci(5));*/
+
+// 6 - misol
+/*function isEven(number) {
+    if (number < 0) number = Math.abs(number)
+    if (number === 0) return true
+    if (number === 1) return false
+    else {
+        number = number - 2
+        return isEven(number)
+    }
+}
+console.log(isEven(9));*/
+
+// Functions
+// 1 - exercise
+/*function allComb(string) {
+    let result = [];
+    for (let i = 0; i < string.length; i++){
+        for (let j = i + 1; j <= string.length; j++){
+            result.push(string.slice(i, j));
+        }
+    }
+    return result;
+}
+console.log(allComb('dog'));*/
+
+// 2 - exercise
+/*function sorted(str) {
+    return str.split('').sort().join('')
+}
+console.log(sorted('webmaster'))*/
+
+// 3 - exercise
+/*function toUpper(sentence){
+    let arr = sentence.split(' ');
+    return arr.map(item => {
+        item[0].toUpperCase()
+        return item;
+    }).join(' ');
+}*/
+
+// 4 - exercise
+/*function longest(str) {
+    str = str.split(' ')
+    let long = str[0]
+    for (a of str) {
+        if (a.length >= long.length) long = a
+    }
+    console.log(long)
+}
+longest('Veb ishlab chiqish bo\'yicha qo\'llanma')*/
+
+// 5 - exercise
+/*function isTub(num) {
+    let tubEmas = 0
+    for (let a = 2; a < num; a++) {
+        if (num % a == 0) tubEmas++
+    }
+    if (tubEmas) {
+        console.log(`${num} tub son emas`);
+    }
+    else console.log(`${num} tub son `);
+}
+isTub(17)*/
+
+// 6 - exerice 
+/*function type(any) {
+    console.log(typeof any)
+}
+type(null)*/
+
+// 7 - exerice 
+/*function secondMaxMin(arr){
+    let sorted = new Set(arr.sort());
+    arr = Array.from(sorted)
+    return [arr[1], arr[arr.length - 2]]
+}*/
+
+// 8 - exercise
+/*function perfect(num) {
+    let sum = 0
+    for (a = 1; a < num; a++) {
+        if (num % a == 0) sum += a
+    }
+    if (sum === num) console.log(`${num} is perfect number`)
+    else console.log(`${num} isn't perfect number`)
+}
+perfect(28)*/
+
+// 9 - exercise
+/*function dividers(num) {
+    let arr = []
+    for (a = 1; a <= num; a++) {
+        if (num % a === 0) {
+            arr.push(a)
+        }
+    }
+    console.log(arr);
+}
+dividers(15)*/
+
+// 10 - exercise
+/*let i = 0;
+let arr1 = [];
+function coin(num, arr){
+    if(i === arr.length) return arr1
+    if(num-arr[i] >= 0){
+        arr1.push(arr[i]);
+        num = num - arr[i]
+        return coin(num, arr)
+    } if(num - arr[i] < 0) {
+        i++;
+        return coin(num, arr);
+    }
+}
+
+console.log(coin(46, [25, 10, 5, 2, 1]));*/
+
+// 11 - exercise
+/*function kvadrat(son, kvadrat) {
+    console.log(son**kvadrat)
+}
+kvadrat(2, 5)*/
+
+// 12 - exercise
+/*function chopSame(str) {
+    let strin = ''
+    str = new Set(str)
+    for (a of str) strin += a
+    console.log(strin)
+}
+chopSame("thequickbrownfoxjumpsoverthelazydog")*/
+
+// 13 - exercise
+/*function count(str) {
+    let arr = []
+    let num = 0
+    for (a = 0; a < str.length; a++) {
+        for (b = 0; b < str.length; b++) {
+            if (str[a] === str[b]) {
+                num++
+            }
+        }
+        arr.push(`${str[a]} ${num} martda aylandi`)
+        num = 0
+    }
+    arr = new Set(arr)
+    arr = Array.from(arr)
+    console.log(arr);
+}
+count('Najot ta\'lim')*/
+
+// 14 - exercise
+/*function larger(array, num) {
+    let arr = []
+    for (const item of array) {
+        if (item >= num) arr.push(item)
+    }
+    console.log(arr);
+}
+larger([10, 45, 20, 4, 5, 6], 10)*/
+
+// 15 - exercise
+/*function random(num) {
+    let soz = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let randomSoz = ''
+    for (index = 0; index < num; index++) randomSoz += soz[Math.round(Math.random() * soz.length - 1)]
+    console.log(randomSoz);
+}
+random(8)*/
+
+// 17 - exercise
+/*function count(str, word) {
+    let son = 0
+    for (const words of str) {
+        if (word === words) son++
+    }
+    console.log(son);
+}
+count('Najot Ta\'lim', 'o')*/
+
+// 18 - exercise
+/*function unique(str) {
+    let len = str.length
+    let num = 0
+    for (a = 0; a < str.length; a++) {
+        for (b = 0; b < str.length; b++) {
+            if (str[a] === str[b]) {
+                num ++
+            }
+        }
+        if (num === 1) {
+            return str[a]
+        }
+        else num = 0
+    }
+}
+console.log(unique('abacddbec'));*/
+
+// 19 - exercise
+/*function sortByBig(arr) {
+    arr.sort(function (a, b) {
+        if (a > b) return 1
+        if (a < b) return -1
+        return 0
+    })
+    arr = arr.reverse()
+    console.log(arr);
+}
+sortByBig([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213])*/
+
+// 20 - exercise
+/*function bigname(arr) {
+    arr.sort(function (a, b) {
+        if (a.length > b.length) return 1
+        if (a.length < b.length) return -1
+        return 0
+    })
+    console.log(arr[arr.length - 1]);
+}
+bigname(["O'zbek", "Avstraliya", "Germaniya", "Amerika Qo'shma Shtatlari"])*/
+
+// 21 - exercise
+/*function longest_substring_without_repeating_characters(input) {
+    let chars = input.split('');
+    let curr_char;
+    let str = "";
+    let longest_string = "";
+    let hash = {};
+    for (let i = 0; i < chars.length; i++) {
+        curr_char = chars[i];
+        if (!hash[chars[i]]) { 
+            str += curr_char; 
+            hash[chars[i]] = {index:i};
+        }
+        else {
+            if(longest_string.length <= str.length) {
+                longest_string = str;
+            }
+            let prev_dupeIndex = hash[curr_char].index;
+            let str_FromPrevDupe = input.substring(prev_dupeIndex + 1, i);
+            str = str_FromPrevDupe + curr_char;
+            hash = {};
+            for (let j = prev_dupeIndex + 1; j <= i; j++) {
+                hash[input.charAt(j)] = {index:j};
+            }
+        }   
+    }
+    return longest_string.length > str.length ? longest_string : str;
+}
+console.log(longest_substring_without_repeating_characters("google.com")); 
+console.log(longest_substring_without_repeating_characters("example.com")); */
+
+// 22 - exercise
+/*function is_Palindrome(str1) {
+    let rev = str1.split("").reverse().join("");
+    return str1 == rev;
+}
+function longest_palindrome(str1){
+    let max_length = 0,
+    maxp = '';
+    for(let i=0; i < str1.length; i++) {
+        let subs = str1.substr(i, str1.length);
+        for(let j=subs.length; j>=0; j--) {
+            let sub_subs_str = subs.substr(0, j);
+            console.log(sub_subs_str);
+            if (sub_subs_str.length <= 1) continue;
+            if (is_Palindrome(sub_subs_str)) {
+                if (sub_subs_str.length > max_length) {
+                    max_length = sub_subs_str.length;
+                    maxp = sub_subs_str;
+                }
+            }           
+        }
+    }
+    return maxp;
+}
+    console.log(longest_palindrome("12321"));*/
+
+// 23 - exercise
+/*function logFuncName() {
+    console.log( arguments.callee.name );
+}
+logFuncName();*/
+
+// JavaScript conditional statements and loops
+// 1 - exercise
+/*let num = 5
+let num2 = 6
+if (num > num2) console.log(num);
+if (num < num2) console.log(num2);
+if (num === num2) console.log("teng");*/
+
+// 2 - exercise
+/*let num1 = 2
+let num2 = 3
+let num3 = -5
+if (num1 * num2 * num3 >= 0) console.log('+');
+else console.log('-');*/
+
+// 3 - exercise
+/*let num1 = 2
+let num2 = 3
+let num3 = 15
+if (num1 >= num2 && num1 >= num3 && num2 >= num3) console.log(num1, num2, num3);
+if (num1 >= num2 && num1 >= num3 && num3 >= num2) console.log(num1, num3, num2);
+if (num2 >= num1 && num2 >= num3 && num1 >= num3) console.log(num2, num1, num3);
+if (num2 >= num2 && num2 >= num3 && num3 >= num1) console.log(num2, num3, num1);
+if (num3 >= num2 && num3 >= num1 && num2 >= num1) console.log(num3, num2, num1);
+if (num3 >= num2 && num3 >= num1 && num1 >= num2) console.log(num3, num1, num2);*/
+
+// 4 - exercise
+/*let [num1, num2, num3, num4, num5] = [2, 3, 15, 18, 1]
+if(num1 >= num2 && num1 >= num3 && num1 >= num4 && num1 >= num5) console.log(num1);
+if(num2 >= num1 && num2 >= num3 && num2 >= num4 && num2 >= num5) console.log(num2);
+if(num3 >= num2 && num3 >= num1 && num3 >= num4 && num3 >= num5) console.log(num3);
+if(num4 >= num2 && num4 >= num3 && num4 >= num1 && num4 >= num5) console.log(num4);
+if(num5 >= num2 && num5 >= num3 && num5 >= num4 && num5 >= num1) console.log(num5);*/
+
+// 5 - exercise
+/*for (a = 0; a <= 15; a++) {
+    console.log(a, a % 2 == 0 ? 'juft' : 'toq');
+}*/
+
+// 6 - exercise
+/*let students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+let sum = 0
+for (a = 0; a < students.length; a++) {
+    sum += students[a][1]
+}
+sum = sum / students.length
+console.log(sum);
+switch (sum) {
+    case sum <= 60:
+        console.log('F');
+        break;
+    case sum <= 70:
+        console.log('D');
+        break;
+    case sum <= 80:
+        console.log('C');
+        break;
+    case sum <= 90:
+        console.log('B');
+        break;
+    case sum <= 100:
+        console.log('A');
+        break;
+    // default:
+    //     console.log('gap yo');
+}*/
+
+// 8 - exercise
+/*let num = 7
+let son = 0
+while(num !== 1) {
+    while (num >= 10) {
+        son += (num % 10) * (num % 10)
+        num = num / 10
+        num = Math.floor(num)
+    }
+    console.log(son + num**2);
+    son += num**2
+    num = son
+    son = 0
+}*/
+
+// 9 - exercise
+/*let num = 371
+let num3 = num
+let num2 = 0
+while (num !== 0) {
+    num2 += (num % 10) * (num % 10) * (num % 10)
+    num = num / 10
+    num = Math.floor(num)
+}
+if (num3 === num2) console.log(`${num2} is Armstrong number`);
+else console.log(`${num2} isn't Armstrong number`);*/
+
+// 10 - exersice
+/*let star = ''
+for (a = 0; a <= 5; a++) {
+    for (b = 0; b < a; b++) {
+        star += '*'
+    }
+    console.log(star);
+    star = ''
+}*/
+
+// 11 - exercise
+/*let num = 155
+let num2 = 785
+while (num != num2) {
+    if (num > num2) num = num - num2
+    else num2 = num2 - num
+}
+console.log(num);*/
+
+// 12 - exercise
+/*let sum = 0
+for (a = 1; a <= 1000; a++) {
+    if (a % 3 == 0 || a % 5 == 0) sum += a
+}
+console.log(sum);*/
+
+// Math
+// 1 - exercise
+/*function convert(number, base, change) {
+    if ((base && change) < 2 || (base && change) > 36)
+    return 'base between 2 and 36'
+    return parseInt(number + '', base).toString(change)
+}*/
+
+// 2 - exercise
+/*function binaryChange(nums) {
+    return parseInt((nums + '').replace(/[^01]/gi, ''), 2)
+}
+console.log(binaryChange('110011'));
+console.log(binaryChange('100'));*/
+
+// 3 - exercise
+/*function binaryChange(a, base) {
+    if (a < 0) {
+        a = 0xFFFFFFFF + a + 1
+    }
+    switch (base) {
+        case 'B':
+            return parseInt(a, 10).toString(2);
+        case 'H':
+            return parseInt(a, 10).toString(16);
+        case 'O':
+            return parseInt(a, 10).toString(8);
+            default:  
+            return("Wrong input.........");  
+            
+    }
+}
+console.log(binaryChange(120,'B'));
+console.log(binaryChange(120,'H'));
+console.log(binaryChange(120,'O'));*/
+
+// 4 - exercise
+/*function ran(...num) {
+    if (num[0] > num[1]) console.log(Math.round(Math.random()*num[0]));
+    if (num[0] < num[1]) console.log(Math.round(Math.random()*num[1]));
+    else console.log(Math.round(Math.random()*num));
+}
+ran(20)*/
+
+// 5 - exercise
+/*function onlik(num, noli) {
+    console.log(num.toFixed(noli));
+}
+onlik(2.100212, 5)*/
+
+// 6 - exercise
+/*function max(arr) {
+    arr = arr.sort((a, b) => a > b ? 1 : -1)
+    console.log(arr[arr.length - 1]);
+}
+max([12,34,56,1])*/
+
+// 7 - exercise
+/*function min(arr) {
+    arr = arr.sort((a, b) => a > b ? 1 : -1)
+    console.log(arr[0]);
+}
+min([12,34,56,1])*/
+
+// 8 - exercise
+/*function EKUB(num1, num2) {
+    while (num1 !== num2) {
+        if (num1 > num2) num1 -= num2
+        else num2 -= num1
+    }
+    console.log(num1);
+}
+EKUB(9, 3)*/
+
+// 9 - exercise
+/*function EKUBforArray(array) {
+    let  b;
+    a = array[0];
+    for (var i = 1; i < array.length; i++) {
+        b = array[ i ];
+        array[0] = two(array[0], b);
+    }
+    return a;
+}
+  
+function two(num1, num2) {
+    num1 = Math.abs(num1);
+    num2 = Math.abs(num2);
+    while(num2) {
+        let t = num2;
+        num2 = num1 % num2;
+        num1 = t;
+    }
+    return num1;
+  }
+  console.log(EKUBforArray([3,15,27]));
+  console.log(EKUBforArray([5,10,15,25]));*/
+
+// 10 - exercise
+/*function lcm(num1, num2) {
+    return Math.abs((num1 * num2) / two(num1, num2));
+}
+ 
+function two(num1, num2) {
+    num1 = Math.abs(num1);
+    num2 = Math.abs(num2);
+    while(num2) {
+        let t = num2;
+        num2 = num1 % num2;
+        num1 = t;
+    }
+    return num1;
+}
+console.log(lcm(3,15));
+console.log(lcm(10,15));*/
+
+// Array
+// 1 - exercise
+/*unction isArray(thing) {
+    if (toString.call(thing) === "[object Array]") return true
+    return false
+}
+console.log(isArray([1, 2, 3]));*/
+
+// 2 - exercise
+/*function clone(array) {
+    return array.slice(0)
+}
+console.log(clone([1, 2, 4, 0]));
+console.log(clone([1, 2, [4, 0]]));*/
+
+// 3 - exercise
+/*function birinchi(array) {
+    return array[0]
+}
+console.log(birinchi([1, 2, 3, 45, 8]));*/
+
+// 4 - exercise
+/*function last(array, number) {
+    if (number == null) return array[array.length - 1]
+    return array.slice(Math.max(array.length - number, 0))
+}
+console.log(last([1, 2, 3, 4], 2));*/
+
+// 5 - exercise
+/*let array  = ['red', 'green', 'white']
+console.log(array.toString());
+console.log(array.join(','));*/
+
+// 6 - exercise
+/*const num = 2468951234875
+const str = num.toString();
+const res = [str[0]];
+  
+for(let a=1; a < str.length; a++) {
+    if((str[a - 1] % 2 === 0) && (str[a] % 2 === 0)) res.push('-', str[a]);
+    else res.push(str[a]);
+}
+console.log(res.join(''));*/
+
+// 7 - exercise
+/*let arr = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+console.log(arr.sort((a, b) => a > b ? 1 : -1));*/
+ 
+// 8 - exercise
+/*let arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+let nima = ''
+let nechta = 0
+let max = 0
+let maxstr = ''
+for (a = 0; a < arr.length; a++) {
+    for (b = 0; b < arr.length; b++) {
+        if (arr[a] === arr[b]) {
+            nima = arr[a]
+            nechta++
+        }
+    }
+    if (max < nechta) {
+        max = nechta
+        maxstr = arr[a]
+    }
+    nechta = 0
+}
+console.log(max);
+console.log(maxstr);*/
+
+// 9 - exercise
+/*let str = "Tez jigarrang tulki"
+let rev = ''
+for (const a of str) {
+    if (a == a.toUpperCase()) rev += a.toLowerCase()
+    else rev += a.toUpperCase()
+}
+console.log(rev);*/
+
+// 10 - exercise
+/*let array = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+for (const a in array) {
+    for (const b of array[a]) {
+        console.log(`${b} ni qatori ${a}`);
+    }
+}*/
+
+// String
+// 1 - exercise
+/*function is_string(input) {
+    return typeof input === 'string' ? true : false
+}
+console.log(is_string([1, 2, 4, 0]));*/
+
+// 2 - exercise
+/*function isBlank(input) {
+    return input ? true : false
+}
+console.log(isBlank('')
+);*/
+
+// 3 - exercise
+/*function stringToArray(str) {
+    return str.split(' ')
+}
+console.log(stringToArray('tomas kimdir'));*/
+
+// 4 - exercise
+/*function truncate_string(str, num) {
+    return str.slice(0, num)
+}
+console.log(truncate_string('robinson', 4));*/
+
+// 5 - exercise
+/*function abbrev_name(str) {
+    str = str.split(' ')
+    return str[0] + ' ' + str[1][0] + '.'
+}
+console.log(abbrev_name("Robin Singx"));*/
+
+// 6 - exercise
+/*function protectEmail(str) {
+    str = str.split('@')
+    let half1 = str[0].substring(0, str[0].length / 2)
+    return half1 + '...' + str[1]
+}
+console.log(protectEmail('kimdir@gmail.com'));*/
+
+// 7 - exercise
+/*function string_parameterize(str) {
+    str = str.split(' ')
+    return str.join('-')
+}
+console.log(string_parameterize("AQShdan Robin Singx."));*/
+
+// 8 - exercise
+/*function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
+console.log(capitalize('js string exercises'));*/
+
+// 9 - exercise
+/*function capitalize_Words(str) {
+    str = str.split(' ')
+    let str2 = ''
+    for (const a of str) {
+        str2 += a[0].toUpperCase() + a.slice(1) + ' '
+    }
+    return str2
+}
+console.log(capitalize_Words('js string mashqlari'));*/
+
+// 10 - exercise
+/*function swapcase(str) {
+    let rev = ''
+for (const a of str) {
+    if (a == a.toUpperCase()) rev += a.toLowerCase()
+    else rev += a.toUpperCase()
+}
+return rev
+}
+console.log(swapcase('AaBbc'));*/
+
+// Number
+
+
+
+
+
+
+
+
+
+
+
+
+
