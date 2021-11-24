@@ -566,6 +566,34 @@ function two(num1, num2) {
 console.log(lcm(3,15));
 console.log(lcm(10,15));*/
 
+// 11 - exercise
+
+// 12 - exercise
+/*function natural(num) {
+    console.log(Infinity);
+    return (num > 0.0) && (Math.floor(num) = num) && num !== Infinity
+}
+console.log(natural(-15));*/
+
+// 13 - exercise
+/*function daraja(num) {
+    while (num > 2) {
+        num = num / 2
+    }
+    return num === 2 ? true : false
+}
+console.log(daraja(256));*/
+
+// 14 - exercise
+/*function aniq(num, num2) {
+    let num3 = Math.floor(Math.abs(num)).toString
+    return num.toPrecision(num3.length + num2 + 1)
+}
+console.log(aniq(-10.3079499, 3));*/
+
+// 15 - exercise
+
+
 // Array
 // 1 - exercise
 /*unction isArray(thing) {
