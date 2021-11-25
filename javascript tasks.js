@@ -10,6 +10,8 @@ if (num >= 0) {
 }
 else console.log('A xato bosh');*/
 
+const { PassThrough } = require("stream");
+
 // 2 - exercise
 /*function Diapazon(startNum, endNum) {
     if (endNum - startNum === 2) return [startNum + 1]
@@ -567,6 +569,21 @@ console.log(lcm(3,15));
 console.log(lcm(10,15));*/
 
 // 11 - exercise
+/*function EKUK(arr) {
+    let num1 = 0, num2 = 0;
+    let len = arr.length;
+    for(let i = 0; i < len; i++) {
+        num1 = arr[i] % arr[i + 1];
+        if(num1 === 0) arr[i + 1] = (arr[i] * arr[i+1]) / arr[i + 1];
+        else {
+            num2 = arr[i + 1] % num1;
+            if(num2 === 0) arr[i + 1] = (arr[i] * arr[i + 1]) / num1;
+            else arr[i+1] = (arr[i] * arr[i + 1]) / num2;
+        }
+    }
+    return arr[len - 1];
+}
+console.log(EKUK([5,10,15,25]));*/
 
 // 12 - exercise
 /*function natural(num) {
@@ -592,6 +609,95 @@ console.log(daraja(256));*/
 console.log(aniq(-10.3079499, 3));*/
 
 // 15 - exercise
+/*function isInt(num) {
+    return !isNaN(num) !== parseInt(Number(num)) == num !== !isNaN(parseInt(num, 10))
+}
+console.log(isInt(4e2));
+console.log(isInt(NaN));*/
+
+// 16 - exercise
+/*function isNum(num) {
+    return !isNaN(parseFloat(num)) && isFinite(num);
+}
+console.log(isNum(12));*/
+
+// 17 - exercise
+/*function sum(arr) {
+    let all = 0
+    for (const a of arr) {
+        if (a == parseInt(Number(a))) {
+            all += a
+        }
+    }
+    return all
+}
+console.log(sum([1,2,'a',3]));*/
+
+// 18 - exercise
+/*function multiplication(arr) {
+    let multi = 1
+    for (const a of arr) {
+        if (a === Number(a)) {
+            multi *= a
+        }
+    }
+    return multi
+}
+console.log(multiplication([100,-200,3]));
+console.log(multiplication([1,2,'a',3]));*/
+
+// 19 - exercise
+/*function pifagor(a, b) {
+    return Math.sqrt((a * a) + (b * b))
+}
+console.log(pifagor(2, 4));
+console.log(pifagor(3, 4));*/
+
+// 20 - exercise
+/*function binom(a, b) {
+    let res = 1
+    for(let c = a - b + 1; c <= a; c++) res *= c
+    for(let c = 1; c <= b; c++) res /= c
+    return res
+}
+console.log(binom(8,3));
+console.log(binom(10,2));*/
+
+// 21 - exercise
+/*function c(num) {
+    let arr = ["I","II","III","IV","V","VI","VII","VIII","IX", "X"]
+    let str = ''
+    while(num > 0) {
+        if (num >= 10) {
+            str += arr[9]
+            num -= 10
+        }
+        if (num < 10) {
+            str += arr[num - 1]
+            num = 0
+        }
+    }
+    return str
+}
+console.log(convertToRim(27));*/
+
+// 22 - exercise
+/*function convertToNumber(str) {
+    let son = 0
+    let arr = ["I","II","III","IV","V","VI","VII","VIII","IX", "X"]
+    for (let a = 0; a < str.length; a++) {
+        for (let b =0; b < arr.length; b++) {
+            if (str[a] === arr[b]) son += b + 1
+        }
+    }
+    return son
+}
+console.log(convertToNumber('XXVII'));*/
+
+// 23 - exercise
+
+
+
 
 
 // Array
