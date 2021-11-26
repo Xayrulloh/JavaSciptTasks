@@ -10,8 +10,6 @@ if (num >= 0) {
 }
 else console.log('A xato bosh');*/
 
-const { PassThrough } = require("stream");
-
 // 2 - exercise
 /*function Diapazon(startNum, endNum) {
     if (endNum - startNum === 2) return [startNum + 1]
@@ -687,7 +685,7 @@ console.log(convertToRim(27));*/
     let arr = ["I","II","III","IV","V","VI","VII","VIII","IX", "X"]
     for (let a = 0; a < str.length; a++) {
         for (let b =0; b < arr.length; b++) {
-            if (str[a] === arr[b]) son += b + 1
+            if (str[a] === arr[b]a) son += b + 1
         }
     }
     return son
@@ -695,10 +693,13 @@ console.log(convertToRim(27));*/
 console.log(convertToNumber('XXVII'));*/
 
 // 23 - exercise
+// galatikan cummadm keyn qaytaman
 
+// 24 - exercise
+/*let a = 1.1234000;
+console.log(parseFloat(a.toFixed(4)));*/
 
-
-
+// va hokazo
 
 // Array
 // 1 - exercise
@@ -787,6 +788,198 @@ for (const a in array) {
     }
 }*/
 
+// 11 - exercise
+/*function kv(array) {
+    let len = array.length
+    let sum = 0
+    while (len--) {
+        sum += Math.pow(array[len], 2)
+    }
+    console.log(sum);
+}
+kv([0, 1, 2, 3, 4])*/
+
+// 12 - exercise
+/*let array = [1, 2, 3, 4, 5, 6]
+let sum = 0
+let sum2 = 1
+array.forEach(element => {
+    sum += element, sum2 *= element
+});
+console.log(sum, sum2);*/
+
+// 13 - exercise
+/*let array = []
+console.log(array.push(1));*/
+
+// 14 - exercise
+/*function removeDublicate(array) {
+    let arr = []
+    for (const element of array) {
+        if (!arr.includes(element)) arr.push(element)
+    }
+    console.log(arr);
+}
+removeDublicate([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6])*/
+
+// 15 - exercise Galatikan
+
+// 16 - exercise
+/*function kabisa(year, year2) {
+    let arr = []
+    while (year <= year2) {
+        if (year % 400 == 0) arr.push(year) 
+        else if(year % 100 != 0 && year % 4 == 0) arr.push(year)
+        year++
+    }
+    return arr
+}
+console.log(kabisa(2000,2012));*/
+
+// 17 - exercise
+/*function alkashChulkash(array) {
+    let len = array.length
+    let prosta = 0
+    while (len > 0) {
+        let index = Math.floor(Math.random() * len)
+        len --
+        prosta = array[len]
+        array[len] = array[index]
+        array[index] = prosta
+    }
+    console.log(array);
+}
+alkashChulkash([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])*/
+
+// 18 -  exercise chunmadm
+
+// 19 - exercise
+/*let massiv1 = [1,0,2,3,4];
+let massiv2 = [3,5,6,7,8,13];
+let massiv3 = []
+if (massiv1.length > massiv2.length) {
+    for (let a = 0; a < massiv1.length; a ++) {
+        if (massiv2[a]) massiv3.push(massiv2[a] + massiv1[a])
+        else massiv3.push(massiv1[a])
+    }
+}
+else {
+    for (let a = 0; a < massiv2.length; a ++) {
+        if (massiv1[a]) massiv3.push(massiv2[a] + massiv1[a])
+        else massiv3.push(massiv2[a])
+    }
+}
+console.log(massiv3);*/
+
+// 20 - exercise
+/*function duplicate(array) {
+    let same = 0
+    let arr = []
+    for (let element of array) {
+        for (let elemen of array) {
+            if (element === elemen) {
+                same++
+            }
+        }
+        if (same >= 2) {
+            arr.push(element)
+        }
+        same = 0
+    }
+    console.log(new Set(arr));
+}
+duplicate([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6])*/
+
+// 21 - exercise chunarsz
+
+// 22 - exercise
+/*function merge(arr, arr2) {
+    let array = Array.from(new Set(arr.concat(arr2)))
+    return array
+}
+console.log(merge([1, 2, 3], [100, 2, 1, 10]));*/
+
+// 23 - exercise miyya qizib ketdi
+
+// 24 - exercise
+/*let arr = [NaN, '0', 15, false, -22, '', undefined, 47, null]
+let array = []
+for (const a of arr) {
+    if (a === Number(a)) array.push(a)
+}
+console.log(array);*/
+
+// 25 - exercise
+/*let library = [ 
+    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+    ];
+function sortTitle(a, b) {
+    return a.title > b.title ? 1 : -1
+}
+console.log(library.sort(sortTitle));*/
+
+// 26 - exercise
+
+// Date
+// 1 - exercise
+/*function is_date(str) {
+    return Object.prototype.toString.call(str) === '[object Date]' ? true : false
+}
+console.log(is_date("October 13, 2014 11:13:00"));
+console.log(is_date(new Date(86400000)));*/
+
+// 2 - exercise
+/*let today = new Date()
+console.log(`${today.getMonth()}.${today.getDate()}.${today.getFullYear()}`);*/
+
+// 3 - exercise
+/*console.log(new Date(11, 2020, 0).getDate());  */
+
+// 4 - exercise
+/*let month_name = function(dt){
+    let mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
+    return mlist[dt.getMonth()];
+};
+console.log(month_name(new Date("10/11/2009")));*/
+
+// 5 - exercise cunarsz
+
+// 6 - exercise
+/*function addMinutes(dt, minute) {
+    return new Date(dt.getTime() + minute*6000)
+}
+console.log(addMinutes(new Date(2021,11,26), 30).toString());*/
+
+// 7 - exercise
+/*function isWeekend(date) {
+    let date1 = new Date(date)
+    return date1.getDay() == 6 || date1.getDay() == 0 ? true : false  // false chunki bugun juma
+}
+console.log(isWeekend('Nov 11, 2020'));*/
+
+// 8 - exercise
+/*function ayirish(date1, date2) {
+    let d1 = new Date(date1)
+    let d2 = new Date(date2)
+    return Math.floor((Date.UTC(d1.getFullYear(), d1.getMonth(), d1.getDate())) - Date.UTC(d2.getFullYear(), d2.getMonth(), d2.getDate()))
+}
+console.log(ayirish('04/02/2020', '11/04/2021'));*/
+
+// 9 - exercise
+/*function lastday(y, m) {
+    return new Date(y, m, 0).getDate()
+}
+console.log(lastday(2021,11));*/
+
+// 10 - exercise
+/*function yesterday(date) {
+    let dat = new Date(date)
+    return new Date((dat.setDate(dat.getDate() - 1))).toString()
+}
+console.log(yesterday('Nov 15, 2014'));*/
+
 // String
 // 1 - exercise
 /*function is_string(input) {
@@ -863,7 +1056,62 @@ return rev
 }
 console.log(swapcase('AaBbc'));*/
 
-// Number
+// 11 - exercise cunmadm
+
+// 12 - exercise
+/*function uncemalize(str, s) {
+    let middle = str.length/2
+    middle = Math.floor(middle)
+    console.log(str.slice(0, middle) + s + str.slice(middle, str.length));
+}
+uncemalize('helloworld', '-')*/
+
+// 13 - exercise
+/*function takrorlash(str, num) {
+    let s = ''
+    for (let a = 0; a < num; a++) {
+        s += str
+    }
+    console.log(s);
+}
+takrorlash('ha', 2)*/
+
+// 14 - exercise
+/*function insert(str, add = '', pos = 0) {
+    console.log(str.slice(0, pos) + add + str.slice(pos));
+}
+insert('We are doing some exercises.','JavaScript ',18)*/
+
+// 15 - exercise chunarsiz
+
+// 16 - exercise
+/*function text_truncate(str, index = str.length, value = '') {
+    return str.slice(0, index) + value
+}
+console.log(text_truncate('Biz JS string mashqlarini bajaryapmiz.'))
+console.log(text_truncate('Biz JS string mashqlarini bajaryapmiz.',19))
+console.log(text_truncate('Biz JS string mashqlarini bajaryapmiz.',15,'!!'))*/
+
+// 17 - exercise yogakan munaqasi
+
+// 18 - exercise
+/*function count(str, counted) {
+    str = str.split(' ')
+    let sum = 0
+    for (const a of str) {
+        if (a === counted) sum++
+    }
+    console.log(sum);
+}
+count("The quick brown fox jumps over the lazy dog", 'the')*/
+
+// 19 - exercise oqigimam kemadi
+
+// 20 - exercise galatikan
+
+// 21 - exercise
+
+
 
 
 
