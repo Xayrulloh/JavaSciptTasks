@@ -972,7 +972,15 @@ birlashtirish([1, 2], [3, 5, 6, 1, 2])*/
 console.log(remove([2, 5, 9, 6], 5));*/
 
 // 32 - exercise
+/*let tori = (arr, num) => {if (arr.includes(num)) return true; else false}
+console.log(tori([2, 5, 9, 6], 5));*/
 
+// 33 - exercise
+/*let arr = [1, 2, 3, 4, 5, 7]
+arr = []
+console.log(arr);*/
+
+// 34 - exercise
 
 
 
