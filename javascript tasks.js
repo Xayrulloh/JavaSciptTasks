@@ -981,6 +981,8 @@ arr = []
 console.log(arr);*/
 
 // 34 - exercise
+/*let findLargest = (arr, num) => {arr.sort((a, b) => a > b ? 1 : -1); return arr[num]}
+console.log(findLargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));*/
 
 
 
