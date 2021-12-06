@@ -1018,28 +1018,57 @@ console.log(arrayFilled(6, 'what hell'));*/
 move([10, 20, 30, 40, 50], 0, 2)*/
 
 // 39 - exercise
+/*let filterArrayFunction = (arr) => {
+    let newarr = []
+    arr.forEach(a => {if (a) newarr.push(a)});
+    console.log(newarr);
+}
+filterArrayFunction([58, '', 'abcd', true, null, false, 0])*/
 
+// 40 - exercise
+/*let arrayRange = (num1, num2) => {let arr = []; while (arr.length < num2) arr.push(num1++); console.log(arr);}
+arrayRange(-6, 4)*/
 
+// 41 - exercise
+/*function rangeBetween(num1, num2) {
+    let newarr = []
+    for (; num1 <= num2; num1++) {
+        newarr.push(num1)
+    }
+    console.log(newarr);
+}
+rangeBetween(4, 7)*/
 
+// 42 - exercise
+/*let difference = (arr1, arr2) => {arr1 = arr1.concat(arr2); arr1 = new Set(arr1); console.log(arr1)}
+difference([1, 2, 3], [100, 2, 1, 10])*/
 
+// 43 - exercise
+/*function unzip(arr) {
+    let newarr = []
+    if (arr[0].length >= arr[1].length) {
+        for (let a = 0; a < arr[0].length; a++) {
+            if (!arr[1][a]) {
+                newarr.push(arr[0][a])
+                break
+            }
+            newarr.push([arr[0][a], arr[1][a]])
+        }
+    }
+    else {
+        for (let a = 0; a < arr[1].length; a++) {
+            if (!arr[0][a]) {
+                newarr.push(arr[1][a])
+                break
+            }
+            newarr.push([arr[1][a], arr[0][a]])
+        }
+    }
+    console.log(newarr);
+}
+unzip([['a', 1], ['b', 2, true]])*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 44 - exercise chunmadm
 
 // Date
 // 1 - exercise
