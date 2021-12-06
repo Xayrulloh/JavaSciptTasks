@@ -699,7 +699,7 @@ console.log(convertToNumber('XXVII'));*/
 /*let a = 1.1234000;
 console.log(parseFloat(a.toFixed(4)));*/
 
-// va hokazo
+// qoganini qganman faqat ochb ketdi
 
 // Array
 // 1 - exercise
@@ -921,6 +921,62 @@ function sortTitle(a, b) {
 console.log(library.sort(sortTitle));*/
 
 // 26 - exercise
+/*function find(arr, num) {
+    let newarr = []
+    let f = false
+    for (let a = 0; a <= arr.length; a++) {
+        for (let b = 0; b <= arr.length; b++) {
+            if (a === b) continue
+            if (arr[a] + arr[b] === num) {
+                newarr.push(a); newarr.push(b)
+                f = true
+            }
+        }
+        if (f) break
+    }
+    console.log(newarr);
+}
+find([10,20,10,40,50,60,70],50)*/
+
+// 27 - exercise
+/*let tOrf = (arr) => {
+    let newarr = []
+    arr.forEach(a => {
+        if (a) newarr.push(a)
+    })
+    return newarr
+}
+console.log(tOrf([NaN, 0, 15, false, -22, '',undefined, 47, null]));*/
+
+// 28 - exercise
+/*function longest_common_starting_substring(arr1){
+    let arr= arr1.concat().sort()
+    a1= arr[0], a2= arr[arr.length-1], L= a1.length, i= 0;
+    while(i< L && a1.charAt(i)=== a2.charAt(i)) i++;
+    return a1.substring(0, i);
+}
+console.log(longest_common_starting_substring(['go', 'google'])); */
+
+// 29 - exercise galati
+
+// 30 - exercise
+/*function birlashtirish(arr1, arr2) {
+    let newarr = arr1.concat(arr2)
+    newarr = new Set(newarr)
+    console.log(newarr);
+}
+birlashtirish([1, 2], [3, 5, 6, 1, 2])*/
+
+// 31 - exercise
+/*let remove = (arr, num) => {arr.splice(arr.indexOf(num), 1); return arr}
+console.log(remove([2, 5, 9, 6], 5));*/
+
+// 32 - exercise
+
+
+
+
+
 
 // Date
 // 1 - exercise
