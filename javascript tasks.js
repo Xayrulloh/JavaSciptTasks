@@ -984,6 +984,59 @@ console.log(arr);*/
 /*let findLargest = (arr, num) => {arr.sort((a, b) => a > b ? 1 : -1); return arr[num]}
 console.log(findLargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));*/
 
+// 35 - exercise
+/*let randomElementOfArray = (arr) => arr[Math.round(Math.random() * arr.length - 1)]
+console.log(randomElementOfArray([1, 2, 3, 4, 5, 6]));*/
+
+// 36 - exercise
+/*function arrayFilled(num1, num2) {
+    let arr = []
+    for (let a = 1; a <= num1; a++) arr.push(num2)
+    return arr
+}
+console.log(arrayFilled(6, 0));*/
+
+// 37 - exercise
+/*let arrayFilled = (num1, str) => {
+    let arr = []
+    for (let a = 1; a <= num1; a++) arr.push(str)
+    return arr
+}
+console.log(arrayFilled(6, 'what hell'));*/
+
+// 38 - exercise
+/*function move(arr, num1, num2) {
+    let newarr = []
+    let shortarr = arr.splice(num1, num2 + 1)
+    shortarr.reverse()
+    arr.splice(num1, 0, shortarr)
+    newarr = arr[0]
+    arr.shift()
+    newarr = newarr.concat(arr)
+    console.log(newarr);
+}
+move([10, 20, 30, 40, 50], 0, 2)*/
+
+// 39 - exercise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
