@@ -1128,6 +1128,47 @@ console.log(lastday(2021,11));*/
 }
 console.log(yesterday('Nov 15, 2014'));*/
 
+// 11 - exercise
+/*function max_date(arr) {
+    let maxarr = arr[0]
+    let max_dtObj = new Date(arr[0]);
+    arr.forEach(function(dt) {if (new Date( dt ) > max_dtObj) { maxarr = dt; max_dtObj = new Date(dt)}});
+    return maxarr;
+}
+console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));*/
+
+// 12 - exercise
+/*function minDate(arr) {
+    let minarr = arr[0]
+    let minDt = new Date(arr[0])
+    arr.forEach(function(item) {if (new Date(item) < minDt) {minarr = item; minDt = new Date(item)}})
+    return minarr
+}
+console.log(minDate(['2015/02/01', '2015/02/02', '2015/01/03']));*/
+
+// 13 - exercise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // String
 // 1 - exercise
 /*function is_string(input) {
